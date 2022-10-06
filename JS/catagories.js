@@ -21,10 +21,12 @@ const displayCategoryName = (categories) => {
     const categoryLi = document.createElement('li');
     categoryLi.classList.add("content-center");
     categoryLi.innerHTML = `
-    <a id="${categoryId}">${categoryName}</a>
+    <a id="${categoryId}" class="hover:bg-sky-600">${categoryName}</a>
     `;
     allCategories.appendChild(categoryLi);
+    document.getElementById(`${categoryId}`).addEventListener('click', function () {
+      loadCategoryDetails(`${categoryId}`, categoryName);
+    })
   });
 };
 
-displayCategoryName();
