@@ -9,7 +9,7 @@ const loadCategoryDetails = async (category_id, categoryNameDisplay) => {
   displayNews(categoryDetails, categoryNameDisplay);
 };
 
-loadCategoryDetails('08');
+loadCategoryDetails("08");
 
 // Display News in the News-Container
 const displayNews = (detailsData, categoryNameDisplay) => {
@@ -45,13 +45,13 @@ const displayNews = (detailsData, categoryNameDisplay) => {
     const newsContainerBody = document.createElement("div");
 
     newsContainerBody.innerHTML = `
-        <div class="card lg:card-side bg-base-100 shadow-xl my-5 lg:h-64">
+        <div class="card lg:card-side bg-base-100 shadow-xl my-16 lg:h-72 bg-indigo-800">
           <figure>
-            <img class="object-fill lg:h-64 lg:w-96" src="${postImage}" alt="Movie" />
+            <img class="object-fill lg:h-full lg:w-96" src="${postImage}" alt="Movie" />
           </figure>
-        <div class="card-body">
-            <h2 class="card-title">${postTitle}</h2>
-            <p>${detailsPostShort}</p>
+        <div class="card-body ">
+            <h2 class="card-title font-bold font-sans sm:text-2xl md:text-3xl text-white pb-3">${postTitle}</h2>
+            <p class="text-justify text-slate-300">${detailsPostShort}</p>
             
             <div class="flex justify-between items-center">
             <div class="flex items-center">
@@ -70,14 +70,19 @@ const displayNews = (detailsData, categoryNameDisplay) => {
         <i class="fa-solid fa-star"></i>
         <i class="fa-solid fa-star-half-stroke"></i>
         <i class="fa-regular fa-star"></i>
-    </div>
-    
-    <button class=""><i class="fa-solid fa-arrow-right"></i></button>
+    </div>    
+
+    <label for="my-modal-3" id="${postId}" class="btn modal-button"><i class="fa-solid fa-arrow-right"></i></label>
     
     </div>
   </div>
 </div>
 `;
     newsContainer.appendChild(newsContainerBody);
+
+    // Show News Details.....
+    document.getElementById(`${postId}`).addEventListener("click", function () {
+      loadNewsDetails(`${postId}`);
+    });
   });
 };

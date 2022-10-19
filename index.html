@@ -81,11 +81,53 @@
         id="news-container"
         class="md:container mx-auto md:p-10"
       ></section>
+
+      <!-- Modal -->
+      <section>
+        <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+        <div class="modal">
+          <div class="modal-box relative bg-stone-300">
+            <label
+              for="my-modal-3"
+              class="btn btn-sm btn-circle absolute right-2 top-2"
+              >✕</label
+            >
+            <h3 class="py-2 text-lg font-bold bg-neutral-300 text-black text-center" id="ModalLabel"></h3>
+            <div>
+              <img id="news-image" class="bg-cover bg-center py-4" src="" alt="" />
+
+              <p id="news-details" class="text-indigo-900 font-medium text-justify"></p>
+            </div>
+
+            <div class="flex justify-between mt-3 p-3 bg-gradient-to-r from-cyan-500 to-blue-500">
+              <div class="flex justify-between items-center">
+                <div class="author">
+                  <img id="author-img" class="author-img" src="" alt="" />
+                </div>
+                <div class="mx-2">
+                  <h6 id="author-name" class="m-0 text-black font-semibold"></h6>
+                  <small id="publish-date" class="m-0 text-slate-900"></small>
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <i class="fa-regular fa-eye text-black"></i>
+                <span id="view-news" class="ml-1 text-black"></span>
+              </div>
+
+              <div>
+                <label for="my-modal-3" class="btn md:px-7 md:h-4">Close</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- main section ends -->
 
     <!-- Script Files Links -->
     <script src="./JS/catagories.js"></script>
     <script src="./JS/categoryDetails.js"></script>
+    <script src="./JS/newsDetails.js"></script>
   </body>
 </html>
