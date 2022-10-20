@@ -12,6 +12,7 @@ const loadNewsDetails = async (postId) => {
 //Displaying News Details with Modal
 
 const displayNewsData = (newsData) => {
+  spinner(false);
   const getNews = newsData.data[0];
   const authorName = getNews.author.name
     ? getNews.author.name

@@ -26,6 +26,7 @@ const displayCategoryName = (categories) => {
     allCategories.appendChild(categoryLi);
     document.getElementById(`${categoryId}`).addEventListener('click', function () {
       loadCategoryDetails(`${categoryId}`, categoryName);
+      spinner(true);
     })
   });
 };

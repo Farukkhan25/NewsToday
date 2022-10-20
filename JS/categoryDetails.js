@@ -30,6 +30,7 @@ const displayNews = (detailsData, categoryNameDisplay) => {
             <h4 class="text-center text-orange-800 font-semibold">No News Found !!! <br/> Please Visit Another Category</h4>
         `;
     newsContainer.appendChild(notFound);
+    spinner(false);
   }
 
   // <---Loading News Data--->
@@ -93,10 +94,12 @@ const displayNews = (detailsData, categoryNameDisplay) => {
 </div>
 `;
     newsContainer.appendChild(newsContainerBody);
+    // spinner(false);
 
     // Show News Details.....
     document.getElementById(`${postId}`).addEventListener("click", function () {
       loadNewsDetails(`${postId}`);
+      spinner(true);
     });
   });
 };
