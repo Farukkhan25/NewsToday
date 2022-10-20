@@ -1,18 +1,20 @@
 //News Details Loading here ...
 
 const loadNewsDetails = async (postId) => {
-  const loadNewsDetailsData = await fetch(
-    `https://openapi.programming-hero.com/api/news/${postId}`
-  );
-  const newsDetailsData = await loadNewsDetailsData.json();
-  displayNewsData(newsDetailsData);
+  try {
+    const loadNewsDetailsData = await fetch(
+      `https://openapi.programming-hero.com/api/news/${postId}`
+    );
+    const newsDetailsData = await loadNewsDetailsData.json();
+    displayNewsData(newsDetailsData);
+  } catch (err) {
+    console.log(err);
+  }
 };
-
 
 //Displaying News Details with Modal
 
 const displayNewsData = (newsData) => {
-  spinner(false);
   const getNews = newsData.data[0];
   const authorName = getNews.author.name
     ? getNews.author.name
@@ -45,4 +47,5 @@ const displayNewsData = (newsData) => {
 
   const viewNews = document.getElementById("view-news");
   viewNews.innerText = newsView;
+  spinner(false);
 };

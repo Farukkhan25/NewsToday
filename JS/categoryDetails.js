@@ -1,17 +1,21 @@
 // Category Details Loading here ....
 
 const loadCategoryDetails = async (category_id, categoryNameDisplay) => {
-  const getDetails = await fetch(
-    `https://openapi.programming-hero.com/api/news/category/${category_id}`
-  );
-  const categoryDetails = await getDetails.json();
-  //   console.log(categoryDetails);
-  displayNews(categoryDetails, categoryNameDisplay);
+  try {
+    const getDetails = await fetch(
+      `https://openapi.programming-hero.com/api/news/category/${category_id}`
+    );
+    const categoryDetails = await getDetails.json();
+    displayNews(categoryDetails, categoryNameDisplay);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 loadCategoryDetails("08");
 
 // Display News in the News-Container
+
 const displayNews = (detailsData, categoryNameDisplay) => {
   const details = detailsData.data;
   const newsContainer = document.getElementById("news-container");
@@ -94,7 +98,6 @@ const displayNews = (detailsData, categoryNameDisplay) => {
 </div>
 `;
     newsContainer.appendChild(newsContainerBody);
-    // spinner(false);
 
     // Show News Details.....
     document.getElementById(`${postId}`).addEventListener("click", function () {
@@ -102,4 +105,5 @@ const displayNews = (detailsData, categoryNameDisplay) => {
       spinner(true);
     });
   });
+  spinner(false);
 };
