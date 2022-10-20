@@ -14,9 +14,23 @@ loadCategoryDetails("08");
 // Display News in the News-Container
 const displayNews = (detailsData, categoryNameDisplay) => {
   const details = detailsData.data;
-  //   console.log(details);
   const newsContainer = document.getElementById("news-container");
   newsContainer.innerHTML = "";
+  const detailsNumberOfNews = details.length;
+  const numberOfNews = document.getElementById("item-list");
+  numberOfNews.innerText = detailsNumberOfNews;
+  const placeCategoryName = document.getElementById("category-name");
+  placeCategoryName.innerText = categoryNameDisplay
+    ? categoryNameDisplay
+    : "All News";
+  if (detailsNumberOfNews === 0) {
+    numberOfNews.innerText = "No";
+    const notFound = document.createElement("div");
+    notFound.innerHTML = `
+            <h4 class="text-center text-orange-800 font-semibold">No News Found !!! <br/> Please Visit Another Category</h4>
+        `;
+    newsContainer.appendChild(notFound);
+  }
 
   // <---Loading News Data--->
   details.forEach((detailsNews) => {
@@ -59,20 +73,20 @@ const displayNews = (detailsData, categoryNameDisplay) => {
                     <img class="author-img" src="${authorImg}" alt="" />
                 </div>
             <div class="mx-2">
-                <h6 class="m-0">${authorName}</h6>
-                <small class="m-0">${publishDate}</small>
+                <h6 class="m-0 text-yellow-50">${authorName}</h6>
+                <small class="m-0 text-yellow-50">${publishDate}</small>
             </div>
         </div>
-    <h6><span class="pr-2"><i class="fa-regular fa-eye"></i></span><span>${totalView}</span></h6>
+    <h6><span class="pr-2 text-yellow-50"><i class="fa-regular fa-eye"></i></span><span class="text-yellow-50">${totalView}</span></h6>
     <div class="flex pr-3">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star-half-stroke"></i>
-        <i class="fa-regular fa-star"></i>
+        <i class="fa-solid fa-star text-yellow-50"></i>
+        <i class="fa-solid fa-star text-yellow-50"></i>
+        <i class="fa-solid fa-star text-yellow-50"></i>
+        <i class="fa-solid fa-star-half-stroke text-yellow-50"></i>
+        <i class="fa-regular fa-star text-yellow-50"></i>
     </div>    
 
-    <label for="my-modal-3" id="${postId}" class="btn modal-button"><i class="fa-solid fa-arrow-right"></i></label>
+    <label for="my-modal-3" id="${postId}" class="btn modal-button bg-red-700 border-lime-300"><i class="fa-solid fa-arrow-right text-yellow-50"></i></label>
     
     </div>
   </div>
