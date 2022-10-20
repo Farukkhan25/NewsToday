@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NewsToday</title>
+    <!-- My css link -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- tailwind css cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisy ui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- fontawesome css cdn -->
+    <script
+      src="https://kit.fontawesome.com/2e0b61f41d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <!-- navbar starts here -->
+      <div class="navbar lg:p-5 lg:px-24 bg-base-200">
+        <div class="flex-1 relative">
+          <a class="text-white btn btn-ghost normal-case text-xl"
+            >News
+            <span class="bg-red-800 md:ml-1 md:px-1 border rounded-sm"
+              >TODAY</span
+            ></a
+          >
+        </div>
+        <div class="flex items-center md:gap-2">
+          <ul
+            tabindex="0"
+            class="flex justify-around items-center md:p-2 sm:overflow-hidden shadow bg-base-100 rounded-box md:w-52 w-36"
+          >
+            <li
+              class="text-white hover:bg-green-700 md:py-2 md:px-3 hover:rounded-lg"
+            >
+              <a href="./index.html">News</a>
+            </li>
+            <li
+              class="text-white hover:bg-green-700 py-2 px-3 hover:rounded-lg"
+            >
+              <a href="./blog.html">Blog</a>
+            </li>
+          </ul>
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img src="https://placeimg.com/80/80/people" />
+              </div>
+            </label>
+            <ul
+              tabindex="0"
+              class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- navbar ends here -->
+
+      <!-- Blog Title -->
+      <div
+        class="md:container mx-auto md:px-10 md:py-8 flex-1 justify-center items-center"
+      >
+        <h2
+          class="text-purple-700 text-5xl text-center font-semibold sm:font-bold text-secondary-content p-2 rounded-box"
+        >
+          BLOGS !!!
+        </h2>
+      </div>
+    </header>
+
+    <main>
+      <section class="py-6 sm:py-12 bg-gray-800 text-gray-100">
+        <div class="container p-6 mx-auto space-y-8">
+          <div class="space-y-2 text-center">
+            <h2 class="text-3xl font-bold">
+              Let's learn about some important topics.
+            </h2>
+            <p class="font-serif text-sm text-gray-400">
+              There are nothing wrong to gather knowledge.
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4"
+          >
+            <article class="flex flex-col bg-gray-900">
+              <a rel="" aria-label="Question-1">
+                <img
+                  alt=""
+                  class="object-cover w-full h-52 bg-gray-500"
+                  src="./photos/temp.jpg"
+                />
+                <div class="p-6 space-y-2">
+                  <h3
+                    class="text-2xl font-semibold group-hover:underline group-focus:underline"
+                  >
+                    Why we should Use template literals?
+                  </h3>
+                  <span class="text-xs dark:text-violet-400"
+                    >Md. Faruk Khan</span
+                  >
+                  <p class="text-justify">
+                    The differences between var, let, and const variable
+                    declaration in JavaScript include: Variables declared with
+                    var and const are scoped to the immediate function body.
+                    Variables declared with the var keyword are hoisted.
+                    Hoisting means that the variable can be accessed in their
+                    enclosing scope even before they are declared. Variables
+                    declared with the let keyword are block-scoped, which means
+                    the variables will have scope to the immediate enclosing
+                    block.
+                  </p>
+                </div>
+              </a>
+              <div class="flex flex-col flex-1 p-6">
+                <div
+                  class="flex flex-wrap justify-between space-x-2 text-xs text-gray-400"
+                >
+                  <span>October 21, 2022</span>
+                  <span>2.1K views</span>
+                </div>
+              </div>
+            </article>
+            <article class="flex flex-col bg-gray-900">
+              <a rel="" aria-label="Question-1">
+                <img
+                  alt=""
+                  class="object-cover w-full h-52 bg-gray-500"
+                  src="./photos/var-let-const.jpg"
+                />
+                <div class="p-6 space-y-2">
+                  <h3
+                    class="text-2xl font-semibold group-hover:underline group-focus:underline"
+                  >
+                    What is the difference between var, let, and const in
+                    JavaScript?
+                  </h3>
+                  <span class="text-xs dark:text-violet-400"
+                    >Md. Faruk Khan</span
+                  >
+                  <p class="text-justify">
+                    The differences between var, let, and const variable
+                    declaration in JavaScript include: Variables declared with
+                    var and const are scoped to the immediate function body.
+                    Variables declared with the var keyword are hoisted.
+                    Hoisting means that the variable can be accessed in their
+                    enclosing scope even before they are declared. Variables
+                    declared with the let keyword are block-scoped, which means
+                    the variables will have scope to the immediate enclosing
+                    block.
+                  </p>
+                </div>
+              </a>
+              <div class="flex flex-col flex-1 p-6">
+                <div
+                  class="flex flex-wrap justify-between space-x-2 text-xs text-gray-400"
+                >
+                  <span>October 21, 2022</span>
+                  <span>2.1K views</span>
+                </div>
+              </div>
+            </article>
+            <article class="flex flex-col bg-gray-900">
+              <a rel="" aria-label="Question-1">
+                <img
+                  alt=""
+                  class="object-cover w-full h-52 bg-gray-500"
+                  src="./photos/arrow.png"
+                />
+                <div class="p-6 space-y-2">
+                  <h3
+                    class="text-2xl font-semibold group-hover:underline group-focus:underline"
+                  >
+                    What is the difference between arrow functions and regular
+                    functions?
+                  </h3>
+                  <span class="text-xs dark:text-violet-400"
+                    >Md. Faruk Khan</span
+                  >
+                  <p class="text-justify">
+                    An arrow function is also known as the fat arrow function.
+                    It is a new feature introduced in ES6 that is a more concise
+                    syntax for writing function expressions. Both regular
+                    JavaScript functions and arrow functions work in a similar
+                    manner but there are some differences between them. The
+                    behavior of an arrow function differs considerably from the
+                    regular function's this behavior as an arrow function does
+                    not have its own “this” keyword. The value of this inside an
+                    arrow function remains the same throughout the lifecycle of
+                    the function and is always bound to the value of this in the
+                    closest non-arrow parent function.
+                  </p>
+                </div>
+              </a>
+              <div class="flex flex-col flex-1 p-6">
+                <div
+                  class="flex flex-wrap justify-between space-x-2 text-xs text-gray-400"
+                >
+                  <span>October 21, 2022</span>
+                  <span>2.1K views</span>
+                </div>
+              </div>
+            </article>
+            <article class="flex flex-col bg-gray-900">
+              <a rel="" aria-label="Question-1">
+                <img
+                  alt=""
+                  class="object-cover w-full h-52 bg-gray-500"
+                  src="./photos/map.jpg"
+                />
+                <div class="p-6 space-y-2">
+                  <h3
+                    class="text-2xl font-semibold group-hover:underline group-focus:underline"
+                  >
+                    What is the difference between map(), forEach(), filter()
+                    and find() in Javascript?
+                  </h3>
+                  <span class="text-xs dark:text-violet-400"
+                    >Md. Faruk Khan</span
+                  >
+                  <p class="text-justify">
+                    map(): map() executes the same code on every element in an
+                    array and returns a new array with the updated elements.
+                    forEach: forEach(), is used to execute the same code on
+                    every element in an array but does not change the array and
+                    it returns undefined. filter(): .filter() checks every
+                    element in an array to see if it meets a certain criteria
+                    and returns a new array with the elements that return truthy
+                    for the criteria. find(): Function .find() is also a search
+                    function like the previous but they differ in one small
+                    detail — this function returns only one match in an array.
+                    If in an array is more than one result, the function will
+                    return the first that has matched.
+                  </p>
+                </div>
+              </a>
+              <div class="flex flex-col flex-1 p-6">
+                <div
+                  class="flex flex-wrap justify-between space-x-2 text-xs text-gray-400"
+                >
+                  <span>October 21, 2022</span>
+                  <span>2.1K views</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
