@@ -37,6 +37,10 @@ const displayNews = (detailsData, categoryNameDisplay) => {
     spinner(false);
   }
 
+  details.sort((a, b) => {
+    return b.total_view - a.total_view;
+  });
+
   // <---Loading News Data--->
   details.forEach((detailsNews) => {
     const authorName = detailsNews.author.name

@@ -24,17 +24,22 @@
   <body>
     <header>
       <!-- navbar starts here -->
-      <div class="navbar sm:container lg:mx-auto lg:p-7 bg-base-200">
-        <div class="flex-1">
-          <a class="text-white btn btn-ghost normal-case text-xl">NewsTODAY</a>
+      <div class="navbar lg:p-5 lg:px-24 bg-base-200">
+        <div class="flex-1 relative">
+          <a class="text-white btn btn-ghost normal-case text-xl"
+            >News
+            <span class="bg-red-800 md:ml-1 md:px-1 border rounded-sm"
+              >TODAY</span
+            ></a
+          >
         </div>
-        <div class="flex items-center gap-2">
+        <div class="flex items-center md:gap-2">
           <ul
             tabindex="0"
-            class="flex justify-around items-center p-2 shadow bg-base-100 rounded-box w-52"
+            class="flex justify-around items-center md:p-2 sm:overflow-hidden shadow bg-base-100 rounded-box md:w-52 w-36"
           >
             <li
-              class="text-white hover:bg-green-700 py-2 px-3 hover:rounded-lg"
+              class="text-white hover:bg-green-700 md:py-2 md:px-3 hover:rounded-lg"
             >
               <a>News</a>
             </li>
@@ -70,20 +75,20 @@
 
       <!-- Dynamic Category section starts -->
       <div
-        class="md:container mx-auto md:px-10 flex-1 justify-center items-center"
+        class="md:container mx-auto md:px-10 md:pt-10 flex-1 justify-center items-center"
       >
         <ul
           id="all-categories"
-          class="md:flex-row flex-col justify-center menu bg-purple-500 text-secondary-content p-2 rounded-box"
+          class="md:flex-row flex-col justify-center menu text-purple-700 text-lg font-semibold sm:font-bold text-secondary-content p-2 rounded-box"
         ></ul>
       </div>
       <!-- Dynamic Category section ends -->
     </header>
 
     <!-- Items Count Start-->
-    <section>
+    <section class="md:container md:mx-auto md:px-10">
       <div
-        class="alert alert-info shadow-lg md:container mx-auto flex justify-center text-center mt-10 md:p-7 md:px-10 font-semibold"
+        class="alert alert-info shadow-lg md:container mx-auto flex justify-center text-center mt-10 md:py-7 lg:px-14 font-semibold"
       >
         <div class="">
           <svg
@@ -103,6 +108,28 @@
             <span id="item-list"></span> items found for category
             <span id="category-name"></span>
           </h4>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between mt-10">
+        <div class="flex items-center">
+          <label for="sort" class="text-black text-xl">
+            <span class="pr-3 font-semibold">Sort By:</span>
+            <button class="btn btn-active btn-primary">Most Views</button>
+          </label>
+        </div>
+
+        <div class="buttons">
+          <button
+            class="btn btn-active btn-xs sm:btn-sm md:btn-md lg:btn-md btn-secondary text-white"
+          >
+            Today's Pick
+          </button>
+          <button
+            class="btn btn-xs sm:btn-sm md:btn-md lg:btn-md btn-ghost border text-violet-800 border-slate-500"
+          >
+            Trending
+          </button>
         </div>
       </div>
     </section>
