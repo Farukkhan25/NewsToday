@@ -12,6 +12,8 @@
   color: white;
 }
 
+
+
 body {
   background-color: #F8F9FA;
 }
@@ -31,3 +33,7 @@ body {
   border-radius: 100%;
 }
 
+.active{
+    background: rgb(23, 107, 167);
+    color: #fcfbfb;
+}

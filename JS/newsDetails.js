@@ -44,7 +44,6 @@ const displayNewsData = (newsData) => {
   newsAuthorName.innerText = authorName;
   const date = document.getElementById("publish-date");
   date.innerText = publishDate;
-
   const viewNews = document.getElementById("view-news");
   viewNews.innerText = newsView;
   spinner(false);

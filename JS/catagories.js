@@ -29,13 +29,12 @@ const displayCategoryName = (categories) => {
     <a id="${categoryId}" class="hover:bg-sky-600 hover:text-white">${categoryName}</a>
     `;
       allCategories.appendChild(categoryLi);
-      document
-        .getElementById(`${categoryId}`)
-        .addEventListener("click", function () {
-          loadCategoryDetails(`${categoryId}`, categoryName);
-
-          spinner(true);
-        });
+      const loadCate = document.getElementById(`${categoryId}`);
+      loadCate.addEventListener("click", function () {
+        loadCategoryDetails(`${categoryId}`, categoryName);
+        // loadCate.classList.add("active");
+        spinner(true);
+      });
     });
   } catch (err) {
     console.log(err);
