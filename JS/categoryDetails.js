@@ -68,7 +68,7 @@ const displayNews = (detailsData, categoryNameDisplay) => {
     const newsContainerBody = document.createElement("div");
 
     newsContainerBody.innerHTML = `
-        <div class="card lg:card-side bg-base-100 shadow-xl my-16 lg:h-72 bg-indigo-800">
+        <div class="card lg:card-side bg-base-100 shadow-xl shadow-cyan-500/20 my-16 lg:h-72 bg-indigo-800">
           <figure>
             <img class="object-fill lg:h-full lg:w-96" src="${postImage}" alt="Movie" />
           </figure>
@@ -111,3 +111,14 @@ const displayNews = (detailsData, categoryNameDisplay) => {
   });
   spinner(false);
 };
+
+// Most-Views
+
+document.getElementById('most-views').addEventListener("click", function () {
+  loadCategoryDetails("08");
+})
+
+// Today's Pick
+document.getElementById("today's-pick").addEventListener("click", function () {
+  loadCategoryDetails("01");
+});
